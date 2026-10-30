@@ -87,7 +87,7 @@ app.post("/tasks", (req, res) => {
   }
 
   const id = tasks.length === 0 ? 1 : Math.max(...tasks.map((t) => t.id)) + 1;
-  const tasks = { id, title: String(title).trim(), done: false };
+  const task = { id, title: String(title).trim(), done: false };
 
   tasks.push(task);
   res.status(201).json(tasks);
