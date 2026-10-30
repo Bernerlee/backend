@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+//Middleware
+app.use(express.json());
+
 const MY_TASKS = [
   { id: 1, title: "Pray to God", done: false },
   { id: 2, title: "Check Discord and X", done: true },
